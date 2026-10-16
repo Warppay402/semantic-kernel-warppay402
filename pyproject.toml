@@ -1,0 +1,18 @@
+[project]
+name = "semantic-kernel-warppay402"
+version = "1.0.1"
+description = "Gasless x402 micropayment plugin and Oracle suite for Microsoft Semantic Kernel"
+readme = "README.md"
+authors = [{ name = "WarpPay402", email = "warppay.402@gmail.com" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Framework :: Microsoft :: Semantic Kernel",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+[project.urls]
+Homepage = "https://www.warppay402.com"
+Repository = "https://github.com/Warppay402/semantic-kernel-warppay402"
+Documentation = "https://api.warppay402.com/openapi.json"
