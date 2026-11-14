@@ -3,7 +3,7 @@ import warppay402_mcp as mcp
 from semantic_kernel.functions import kernel_function
 
 class WarpPayPlugin:
-    """Semantic Kernel Plugin exposing WarpPay402 x402 monetized tools."""
+    """Semantic Kernel Plugin exposing WarpPay402 x402 monetized tools and autonomous agents."""
 
     def __init__(self):
         self.tools = {
@@ -36,6 +36,8 @@ class WarpPayPlugin:
             "property_comps_estimator": mcp.PropertyCompsEstimatorTool(),
             "outage_oracle": mcp.OutageOracleTool(),
             "ucp_deals_oracle": mcp.UcpDealsOracleTool(),
+            "warppay_defi_executor": mcp.DefiExecutorAgentTool(),
+            "warppay_deep_research": mcp.DeepResearchAgentTool(),
         }
 
     @kernel_function(
@@ -65,3 +67,17 @@ class WarpPayPlugin:
     )
     def ucp_deals_oracle(self, query: str) -> str:
         return str(self.tools["ucp_deals_oracle"].invoke({"query": query}))
+
+    @kernel_function(
+        description="Autonomous DeFi due-diligence and quote agent orchestrating wallet/contract audits, Aerodrome pool yields, and swap simulation from a single goal ($0.15 USDC).",
+        name="warppay_defi_executor"
+    )
+    def warppay_defi_executor(self, goal: str) -> str:
+        return str(self.tools["warppay_defi_executor"].invoke({"goal": goal}))
+
+    @kernel_function(
+        description="Parallel web scraping, UCP merchant catalog search, and forex spot rate synthesis agent from a single goal ($0.05 USDC).",
+        name="warppay_deep_research"
+    )
+    def warppay_deep_research(self, goal: str) -> str:
+        return str(self.tools["warppay_deep_research"].invoke({"goal": goal}))

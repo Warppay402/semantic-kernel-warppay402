@@ -1,6 +1,6 @@
 [project]
 name = "semantic-kernel-warppay402"
-version = "1.0.4"
+version = "1.1.0"
 description = "Gasless x402 micropayment plugin and Oracle suite for Microsoft Semantic Kernel"
 readme = "README.md"
 license = "MIT"
